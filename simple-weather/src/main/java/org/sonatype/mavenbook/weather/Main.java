@@ -18,10 +18,11 @@ public class Main {
 		int zip = 60;
 		try {
 			zip = Integer.parseInt(args[0]);
-		} catch (NumberFormatException e) {
+		} catch (Exception e) {}
 			// Start the program
+			System.out.println("in catch block");
 			new Main(zip).start();
-		}
+		
 
 	}
 
