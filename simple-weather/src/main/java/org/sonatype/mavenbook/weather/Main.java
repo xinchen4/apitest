@@ -6,8 +6,8 @@ import org.apache.log4j.PropertyConfigurator;
 
 public class Main {
 	
-		private int zipcode;
-	public Main(int zip) {
+		private String zipcode;
+	public Main(String zip) {
 			// TODO Auto-generated constructor stub
 		this.zipcode= zip;
 		}
@@ -15,9 +15,9 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		PropertyConfigurator.configure(Main.class.getClassLoader().getResource("log4j.properties"));
 		
-		int zip = 60;
+		String zip = "60";
 		try {
-			zip = Integer.parseInt(args[0]);
+			zip = args[0];
 		} catch (Exception e) {}
 			// Start the program
 			System.out.println("in catch block");
